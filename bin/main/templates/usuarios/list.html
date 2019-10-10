@@ -1,0 +1,40 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	
+	<title>Usuários</title>
+</head>
+<body class="container">
+	<h1>Usuários</h1> 
+	
+
+		<div class="alert alert-success" role="alert">
+		  Usuário criado com sucesso!
+		</div>
+
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Nome</th>
+				<th scope="col">Sobrenome</th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		<tbody>
+		
+
+			<tr th:each="usuario : ${usuarios}">
+					<td th:text${usuario.nome}></td>
+					<td th:text${usuario.sobrenome}></td>
+			</tr>
+
+		</tbody>
+	</table>
+	
+	<a href="/usuarios/create" class="btn btn-primary">Criar</a>
+
+	
+</body>
+</html>
